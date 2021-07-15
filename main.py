@@ -18,6 +18,7 @@ class PongBall(Widget):
     velocity_y = NumericProperty(0)
     # referencelist property
     velocity = ReferenceListProperty(velocity_x, velocity_y)
+    # TODO: Continue HERE
 
 
 # Important, this is the name of the app, so the .kv file must math the
