@@ -1,0 +1,43 @@
+<MyLayout>:
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        MDScreen:
+
+            MDCard:
+                orientation: "vertical"
+                padding: "8dp"
+                size_hint: None, None
+                size: "280dp", "180dp"
+                pos_hint: {"center_x": .5, "center_y": .5}
+
+                MDLabel:
+                    text: "Danny Van Geyte"
+                    theme_text_color: "Secondary"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDSeparator:
+                    height: "1dp"
+
+                MDLabel:
+                    text: "DenkaTech"
+
+                MDLabel:
+                    text: "Het zijn zotten"
+                    size_hint_y: None
+
+                MDFlatButton:
+                    text: "OK"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0, 1, 1
+
+                MDFlatButton:
+                    text: "CANCEL"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0, 1, 1
+
+        MDIconButton:
+            icon: "language-python"
+            pos_hint: {"center_x": .5, "center_y": .5}
