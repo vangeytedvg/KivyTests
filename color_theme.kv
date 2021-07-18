@@ -1,19 +1,24 @@
-Screen:
+<Content>
+    orientation: "vertical"
+    spacing: "12dp"
+    size_hint_y: None
+    height: "120dp"
 
-    MDRectangleFlatButton:
-        text: "Light Button"
-        pos_hint: {"center_x": 0.5, "center_y": 0.7}
-        md_bg_color: app.theme_cls.primary_light
-    
-    MDRaisedButton:
-        text: "Primary"
-        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    MDTextField:
+        hint_text: "City"
 
-    MDRaisedButton:
-        text: "Dark Button"
-        pos_hint: {"center_x": 0.5, "center_y": 0.3}
-        md_bg_color: app.theme_cls.primary_dark
+    MDTextField:
+        hint_text: "Street"
 
-    MDRoundFlatButton:
-        text: "Dikke Denksken"
-        
+
+FloatLayout:
+
+    MDFlatButton:
+        text: "ALERT DIALOG"
+        pos_hint: {'center_x': .5, 'center_y': .5}
+        on_release: app.on_release_alert()
+
+    MDFlatButton:
+        text: "ALERT DIALOG"
+        pos_hint: {'center_x': .5, 'center_y': .3}
+        on_release: app.on_release_alert2()
