@@ -5,7 +5,7 @@ from kivy.lang import Builder
 
 
 # Builder method style 1
-Builder.load_file("video6.kv")
+Builder.load_file("video7.kv")
 
 
 # Video 6/54
