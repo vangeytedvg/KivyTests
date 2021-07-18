@@ -1,29 +1,35 @@
+<Button>:
+    font_size: 32
+    background_normal: ''
+    background_color: (0,0,1,1)
+
+<TextInput>:
+    background_color: (150/255, 150/255, 150/255,1)
+
+<Label>:
+    font_size: 25
+
 <MyBoxLayout>:
     BoxLayout:
         orientation: "vertical"
         size: root.width, root.height
+        padding: 10
+        spacing: 10
 
-        # Apply spacing to all buttons
-        spacing: 20
-        padding: 30
+        Label:
+            text: "Name"
+
+        TextInput:
+            multiline: False
+
+        Label:
+            text: "Favorite Pizza"
+
+        TextInput:
+            multiline: False
 
         Button:
-            text: "Hello World!"
+            text: "Submit"
 
         Button:
-            text: "Goodbye World!"
-        
-        # Own addition, not in the video
-        BoxLayout:
-            orientation: "horizontal"
-            Button:
-                text: "I'm here"
-                #size_hint: (.3,.15)
-            Button:
-                text: "I'm here too"
-                #size_hint: (.2,.3)
-            Button:
-                text: "I'm here too"
-                #size_hint: (.2,.5)
-
-                
+            text: "Clear"

@@ -3,12 +3,12 @@ from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 
+# This app shows the usage of widget inheritance
 
-# Builder method style 1
-Builder.load_file("video8.kv")
+Builder.load_file("video9.kv")
 
 
-# Video 8/54
+# Video 9/54
 class MyBoxLayout(Widget):
     pass
 
