@@ -1,14 +1,15 @@
 import kivy
 from kivy.app import App
-from kivy.uix.label import Label
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.textinput import TextInput
-from kivy.uix.button import Button
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
+from kivy.lang import Builder
 
 
-# Video 5/54
+# Builder method style 1
+Builder.load_file("video6.kv")
+
+
+# Video 6/54
 class MyGridLayout(Widget):
     # These variables refer to the ones in the .kv file
     # They have no value when the app starts, so we set them
@@ -25,10 +26,13 @@ class MyGridLayout(Widget):
         self.name.text = ""
         self.firstname.text =""
 
-class MyApp(App):
+
+# In this case, the name of the app is indepedent of
+# the name in the .kv file!
+class DenkaTech(App):
     def build(self):
         return MyGridLayout()
 
 
 if __name__ == '__main__':
-    MyApp().run()
+    DenkaTech().run()
