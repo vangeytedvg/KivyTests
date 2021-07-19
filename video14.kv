@@ -1,0 +1,21 @@
+<MyLayout>:
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+    
+        Label:
+            id: name_label
+            text: "Enter your name"
+            font_size: 32
+            size_hint: (1, .5)
+
+        TextInput:
+            id: name_input
+            multiline: False
+            size_hint: (1, .5)
+
+        Button:
+            on_press: root.press()
+            size_hint: (1, .5)
+            font_size: 32
+            text: "Submit"
