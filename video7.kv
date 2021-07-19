@@ -1,0 +1,45 @@
+# The code below would be from kivy.utils import utils
+#:import utils kivy.utils
+<MyGridLayout>:
+    # Declaring variables
+    name:name
+    firstname:firstname
+
+    GridLayout:
+        cols:1
+        # Set the size of the grid layout
+        size: root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "Name"
+                font_size: 32
+                color: utils.get_color_from_hex('#40426e')
+            TextInput:
+                id: name
+                multiline: False
+
+            Label:
+                text: "First Name"
+                font_size: 32
+                color: utils.get_color_from_hex('#40426e')
+
+            TextInput:
+                id: firstname
+                multiline: False
+                background_color: utils.get_color_from_hex('#8db8aa')
+
+        Button:
+            text: "Click me!"
+            font_size: 32
+            on_press: root.press()
+            # If background_normal is not set the color of the button
+            # is darker, not the 'real' color
+            background_normal: ''
+            #background_color: (170/255,245/250,66/255,1)
+            # Using hex color this time
+            background_color: utils.get_color_from_hex('#aaf542')
+            # Color of button text
+            color: utils.get_color_from_hex('#40426e')

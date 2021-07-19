@@ -1,18 +1,31 @@
 from kivy.lang import Builder
+from kivy.uix.boxlayout import BoxLayout
+
 from kivymd.app import MDApp
+from kivymd.uix.button import MDFlatButton
+from kivymd.uix.dialog import MDDialog
+from kivymd.uix.textfield import MDTextField
 
 
-class MainApp(MDApp):
-    """ Main entry point
+class Content(BoxLayout):
+    pass
 
-    Args:
-        MDApp 
-    """
+
+class Example(MDApp):
+    dialog = None
+
     def build(self):
-        self.theme_cls.theme_style = "Dark"
-        self.theme_cls.primary_palette = "Indigo"
-        self.theme_cls.accent_palette = "Red"
-        return Builder.load_file('color_theme.kv')
+        screen = Builder.load_file("color_theme.kv")
+        return screen
+
+    def on_release_alert(self):
+        print("KWAAK")
+
+    def on_release_alert2(self):
+        print("KWEEKK")
+
+    def closeDialog(self, inst):
+        self.dialog.dismiss()
 
 
-MainApp().run()
+Example().run()

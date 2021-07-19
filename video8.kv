@@ -1,0 +1,29 @@
+<MyBoxLayout>:
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        # Apply spacing to all buttons
+        spacing: 20
+        padding: 30
+
+        Button:
+            text: "Hello World!"
+
+        Button:
+            text: "Goodbye World!"
+        
+        # Own addition, not in the video
+        BoxLayout:
+            orientation: "horizontal"
+            Button:
+                text: "I'm here"
+                #size_hint: (.3,.15)
+            Button:
+                text: "I'm here too"
+                #size_hint: (.2,.3)
+            Button:
+                text: "I'm here too"
+                #size_hint: (.2,.5)
+
+                
