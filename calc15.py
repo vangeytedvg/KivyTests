@@ -9,14 +9,9 @@ Window.size = (500, 700)
 Builder.load_file("calculator15.kv")
 
 
-# Video 14/54
+# Video 15-/54
 class MyLayout(Widget):
-    def press(self):
-        # Create ref vars
-        name = self.ids.name_input.text
-        # Update the label
-        self.ids.name_label.text = f"Hello {name}"
-        self.ids.name_input.text = ""
+    def clear(self):
 
 
 class DenkaTechApp(App):
