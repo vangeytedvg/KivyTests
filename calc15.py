@@ -12,6 +12,7 @@ Builder.load_file("calculator15.kv")
 # Video 15-/54
 class MyLayout(Widget):
     def clear(self):
+        pass
 
 
 class DenkaTechApp(App):
