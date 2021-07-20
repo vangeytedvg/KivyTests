@@ -119,8 +119,10 @@
                 font_size: 32
                 text: "."
                 background_color: (157/255,157/255,157/255,1)
+                on_press: root.insert_decimal_dot()
             Button:
                 size_hint: (.2, .2)
                 font_size: 32
                 text: "="
+                on_press: root.calculate_total()
             

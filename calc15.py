@@ -50,11 +50,22 @@ class MyLayout(Widget):
 
     def multiply(self):
         prior = self.ids.calc_input.text
-        self.ids.calc_input.text = f"{prior}x"
+        self.ids.calc_input.text = f"{prior}*"
 
     def divide(self):
         prior = self.ids.calc_input.text
         self.ids.calc_input.text = f"{prior}/"
+
+    def calculate_total(self):
+        prior = self.ids.calc_input.text
+        self.ids.calc_input.text = str(eval(prior))
+
+    def insert_decimal_dot(self):
+        prior = self.ids.calc_input.text
+        operators = ["+", "-", "/", "*"]
+        for oper in operators:
+            if oper in prior[-1] or endswith_number(prior):
+                self.ids.calc_input.text = f"{prior}."
 
 
 class DenkaTechApp(App):
