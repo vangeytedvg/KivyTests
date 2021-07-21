@@ -1,0 +1,34 @@
+<MyLayout>:
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 20
+
+        Button:
+            text: "Click my nose!!"
+            # How to add a background image to a button, super simple!!
+            background_normal: 'images/tutter.jpg'
+            background_down: 'images/tutter2.jpg'
+            background_color: (48/255, 74/255, 70/255,1)
+
+        RoundedButton:
+            text: "Kakkerlakkekaksen"
+            pos_hint: {"center_x": 0.5}
+            size_hint: (1, .3)
+            #background_normal: ''
+            #background_color: (48/255, 74/255, 40/255,1)
+
+
+# Inherit from button in kv language
+<RoundedButton@Button>
+    background_color: (0,0,0,0)
+    background_normal: ""
+    canvas.before:
+        Color:
+            rgba: (48/255, 74/255, 70/255,1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [58]
