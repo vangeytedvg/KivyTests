@@ -4,10 +4,10 @@ from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 
 
-Builder.load_file("video26.kv")
+Builder.load_file("video27.kv")
 
 
-# Video 24/54
+# Video 27/54
 class MyLayout(Widget):
     pass
 

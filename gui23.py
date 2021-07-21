@@ -5,12 +5,16 @@ from kivy.lang import Builder
 
 # This app shows the usage of widget inheritance
 
-Builder.load_file("video22.kv")
+Builder.load_file("video23.kv")
 
 
-# Video 9/54
+# Video 23/54
 class MyLayout(Widget):
-    pass
+    def selected(self, filename):
+        try:
+            self.ids.my_image.source = filename[0]
+        except:
+            pass
 
 
 class DenkaTechApp(App):

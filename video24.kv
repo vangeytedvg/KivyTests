@@ -4,13 +4,21 @@
         orientation: "vertical"
         size: root.width, root.height
 
-        padding: 50
-        spacing: 20
+        Label:
+            id: word_label
+            text_size: self.size
+            halign: "center"
+            valign: "middle"
+            text: "Enter a word"
+            font_size: 32
 
-        Image:
-            id: my_image
-            source: ""
+        TextInput:
+            id: word_input
+            multiline: False
+            size_hint: (1, .5)
 
-        FileChooserListView:
-            id: filechooser
-            on_selection: my_widget.selected(filechooser.selection)
+        Button:
+            size_hint: (1, .5)
+            font_size: 32
+            text: "Check Spelling"
+            on_press: root.press()

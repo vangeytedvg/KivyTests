@@ -1,24 +1,28 @@
 <MyLayout>:
-    id: my_widget
+    slide_text: slider_label
     BoxLayout:
         orientation: "vertical"
         size: root.width, root.height
 
         Label:
-            id: word_label
-            text_size: self.size
-            halign: "center"
-            valign: "middle"
-            text: "Enter a word"
+            id: slider_label
+            text: "Slide"
             font_size: 32
 
-        TextInput:
-            id: word_input
-            multiline: False
-            size_hint: (1, .5)
+        Slider:
+            id: sliddy
+            min: 1
+            max: 50
+            step: 1
+            orientation: "horizontal"
+            on_value: root.slide_it(*args)
 
         Button:
-            size_hint: (1, .5)
-            font_size: 32
-            text: "Check Spelling"
-            on_press: root.press()
+            text: "Horizontal"
+            on_press: root.set_orientation("H")
+            size_hint: (1, 0.5)
+
+        Button:
+            text: "Vertical"
+            on_press: root.set_orientation("V")
+            size_hint: (1, 0.5)

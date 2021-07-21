@@ -1,29 +1,20 @@
 <MyLayout>:
     BoxLayout:
+
         orientation: "vertical"
         size: root.width, root.height
-        Accordion:
-            orientation: "vertical"
-            AccordionItem:
-                title: "Denki"
-                BoxLayout:
-                    orientation: "vertical"
-                    Image:
-                        source: "images/tutter.jpg"
-                        size_hint: (1, 1)
-                    Label:
-                        text: "Pwetter 2"
-                        size_hint: (1, .5)
-                    Label:
-                        text: "Pwetter 2"
-                        size_hint: (1, .5)
-            AccordionItem:
-                title: "DenkaTech"
-                Label:
-                    text: "Pwetter 2"
-                    font_size: 32
-            AccordionItem:
-                title: "DenkaTech"
-                Label:
-                    text: "Pwetter 2"
-                    font_size: 32
+
+        Carousel:
+            #direction: "top"
+            #direction: "bottom"
+            direction: "right"
+            AsyncImage:
+                source: "https://cdn.pixabay.com/photo/2021/07/16/09/54/travel-6470467_960_720.jpg"
+            AsyncImage:
+                source: "https://cdn.pixabay.com/photo/2021/06/26/06/52/moon-6365467_960_720.jpg"
+            AsyncImage:
+                source: "https://cdn.pixabay.com/photo/2021/07/08/08/32/butterfly-6396254_960_720.jpg"
+            Image:
+                source: "images/tutter.jpg"
+            Image:
+                source: "images/tutter2.jpg"

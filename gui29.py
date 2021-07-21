@@ -4,10 +4,10 @@ from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 
 
-Builder.load_file("video28.kv")
+Builder.load_file("video29.kv")
 
 
-# Video 28/54
+# Video 29/54
 class MyLayout(Widget):
     topp = []
     strs = ""
