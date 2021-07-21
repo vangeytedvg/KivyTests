@@ -14,13 +14,7 @@ class MyLayout(Widget):
 
     # Adapted this to my way
     def checkbox_click(self, instance, value, topping):
-        if value:
-            self.topp.append(topping)
-            strs = ', '.join([str(item) for item in self.topp])
-        else:
-            self.topp.remove(topping)
-            strs = ', '.join([str(item) for item in self.topp])
-        self.ids.output_label.text = f"{strs}"
+        self.ids.output_label.text = f"{topping}"
 
 
 class DenkaTechApp(App):
