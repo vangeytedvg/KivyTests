@@ -1,0 +1,26 @@
+<MySwiper@MDSwiperItem>
+    FitImage:
+        radius: [360,]
+
+MDScreen:
+
+    MDToolbar:
+        id: toolbar
+        title: "Sippedy"
+        elevation: 10
+        pos_hint: {"top": 1}
+
+    MDSwiper:
+        size_hint_y: 0.8
+        height: root.height, toolbar.height - dp(40)
+        y: root.height - self.height - toolbar.height - dp(5)
+
+        MySwiper:
+            FitImage:
+                source: "images/tutter2.jpg"
+                radius: [1, ]
+        MySwiper:
+            FitImage:
+                source: "images/tutter.jpg"
+                radius: [1, ]
+        MySwiper:

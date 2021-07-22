@@ -3,30 +3,3 @@
     name:name
     firstname:firstname
 
-    GridLayout:
-        cols:1
-        # Set the size of the grid layout
-        size: root.width, root.height
-
-        GridLayout:
-            cols:2
-
-            Label:
-                text: "Name"
-                font_size: 32
-            TextInput:
-                id: name
-                multiline: False
-
-            Label:
-                text: "First Name"
-                font_size: 32
-            TextInput:
-                id: firstname
-                multiline: False
-
-        Button:
-            text: "Click me!"
-            font_size: 32
-            # link the on_press event to the press() method
-            on_press: root.press()
