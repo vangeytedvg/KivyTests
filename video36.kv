@@ -1,0 +1,20 @@
+<MyLayout>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 20
+
+        Label:
+            text: "Wazaaa"
+            font_size: 32
+
+
+
+        Button:
+            text: "Clickkeci"
+            font_size: 32
+            size_hint: .5,.5
+            pos_hint: {"center_x":.5}
+            on_release: root.animate_it(self)
