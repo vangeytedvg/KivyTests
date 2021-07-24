@@ -1,21 +1,15 @@
 from kivymd.app import MDApp
-from kivymd.uix.label import MDLabel, MDIcon
-from kivymd.font_definitions import theme_font_styles
+from kivymd.uix.screen import Screen
+from kivymd.uix.button import MDFillRoundFlatButton
 
 
 class DemoApp(MDApp):
     def build(self):
-        label = MDLabel(
-            text="Hello World",
-            halign="center",
-            theme_text_color="Error",
-            font_style="Subtitle2",
-        )
-        icon_label = MDIcon(
-            icon='account-cash',
-            halign="center"
-        )
-        return icon_label
+        screen = Screen()
+        btn = MDFillRoundFlatButton(text="Hahaa")
+        screen.add_widget(btn)
+
+        return screen
 
 
 DemoApp().run()
